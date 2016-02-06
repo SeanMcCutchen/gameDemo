@@ -13,7 +13,10 @@ public class babyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(annoyance<=18)
 		GameObject.Find ("Score").GetComponent<TextMesh> ().text = annoyance + "/18";
+		else
+			GameObject.Find ("Score").GetComponent<TextMesh> ().text = "You're a monster";
 	if (annoyance >= 18) 
 		{
 			GameObject.Find ("Plane (8)").GetComponent<Renderer>().material.mainTexture = tex;
