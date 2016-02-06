@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class LightScript : MonoBehaviour {
-	GameObject myLight;
-
+	public Light myLight;
+	private int x;
 	// Use this for initialization
 	void Start () {
 
@@ -13,10 +13,16 @@ public class LightScript : MonoBehaviour {
 	void Update () {
 	
 	}
-	/*
-	public void lightToggle() {
-		myLight = GameObject.Find ("myLight").GetComponent (Light);
+	void OnMouseDown(){
+		babyScript.annoyance ++;
+		if (x % 2 == 0) {
+
+			myLight.enabled = false;
+			x++;
+		} else {
+			myLight.enabled = true;
+			x++;
+		}
 	}
-*/
 
 }
